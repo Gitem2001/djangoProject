@@ -114,10 +114,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print(str(PROJECT_ROOT),'1')
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'herokuapp')
+print(str(STATIC_ROOT),'2')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
+print(str(STATICFILES_DIRS),'3')
 #Add configuration for static files storage using whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
